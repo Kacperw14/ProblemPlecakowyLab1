@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ProblemPlecakowy
 {
@@ -11,6 +12,8 @@ namespace ProblemPlecakowy
         {
             items = new List<Item>();
             Random random = new Random(seed);
+
+            Console.WriteLine("\n");
 
             for (int i = 0; i < N; i++)
             {
@@ -24,8 +27,9 @@ namespace ProblemPlecakowy
             string str = "";
             foreach (Item i in items)
             {
-                str += "v: " + i.value + " \n";
-                str += "w: " + i.weight + " \n\n";
+                str += "v: " + i.value + " \t";
+                str += "w: " + i.weight + " \t";
+                str += "p: " + i.price + " \n";
             }
             return str;
         }
@@ -35,8 +39,10 @@ namespace ProblemPlecakowy
             Plecak plecak;
             //zmiana this 
             //List<float> prices = new List<float>();
+            items = items.OrderBy(items => items.price).ToList();
             foreach (Item i in items)
             {
+                Console.WriteLine(i);
                 
                 //prices.Add(i.GetPrice());
             }
