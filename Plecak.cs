@@ -40,6 +40,7 @@ namespace ProblemPlecakowy
             //zmiana this 
             //List<float> prices = new List<float>();
             items = items.OrderBy(items => items.price).ToList();
+            
             foreach (Item i in items)
             {
                 Console.WriteLine(i);
