@@ -22,6 +22,8 @@ namespace ProblemPlecakowy
             Plecak plecak = new Plecak(n, seed);
             plecak.Sort();
             Console.WriteLine(plecak);
+            plecak.PackBackpack(C);
+            Console.WriteLine(plecak);
             Console.ReadLine();
         }
     }
