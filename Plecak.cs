@@ -37,15 +37,7 @@ namespace ProblemPlecakowy
 
         public void Sort()
         {
-            //items = items.OrderBy(it => it.price).ToList();
             items = items.OrderByDescending(it => it.price).ToList();
-
-            /*
-            foreach (var i in items)
-            {
-               Console.WriteLine(i.price);
-            }
-            */
         }
 
         public void PackBackpack(int capacity)
@@ -60,16 +52,13 @@ namespace ProblemPlecakowy
                 if (package == capacity) break;
                 else if (package < capacity)
                 {
-                    //sprawdzenie czy nie przekroczy pojemnosci plecaka:
-                    if (package + i.weight <= capacity)
+                   if (package + i.weight <= capacity)
                     {
                         package += i.weight;
                         i.x = true;
-                        //plecak.items.Add(i);
                     }
                 }
             }
-            //items = plecak.items;
         }
     }
 
