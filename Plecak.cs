@@ -53,13 +53,12 @@ namespace ProblemPlecakowy
                 else if (package < capacity)
                 {
                    if (package + i.weight <= capacity)
-                    {
+                   {
                         package += i.weight;
                         i.x = true;
-                    }
+                   }
                 }
             }
         }
     }
-
 }
