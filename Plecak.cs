@@ -27,6 +27,7 @@ namespace ProblemPlecakowy
             string str = "";
             foreach (Item i in items)
             {
+                str += "x: " + i.x + " \t";
                 str += "v: " + i.value + " \t";
                 str += "w: " + i.weight + " \t";
                 str += "p: " + i.price + " \n";
@@ -50,7 +51,7 @@ namespace ProblemPlecakowy
         public void PackBackpack(int capacity)
         {
             int package = 0;
-            Plecak plecak = new Plecak(0, 0);
+            //Plecak plecak = new Plecak(0, 0);
 
             Sort();
             foreach (Item i in items)
@@ -63,11 +64,12 @@ namespace ProblemPlecakowy
                     if (package + i.weight <= capacity)
                     {
                         package += i.weight;
-                        plecak.items.Add(i);
+                        i.x = true;
+                        //plecak.items.Add(i);
                     }
                 }
             }
-            items = plecak.items;
+            //items = plecak.items;
         }
     }
 

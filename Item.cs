@@ -11,11 +11,13 @@ namespace ProblemPlecakowy
         public int value;
         public int weight;
         public float price;
+        public bool x;
         public Item(int v, int w)
         {
             value = v;
             weight = w;
             price = (float)v / (float)w;
+            x = false;
         } 
     }
 }
