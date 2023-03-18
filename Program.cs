@@ -12,12 +12,15 @@ namespace ProblemPlecakowy
         {
             Console.WriteLine("Podaj liczbe przedmiotow");
             int n = int.Parse(Console.ReadLine());
+            
+            Console.WriteLine("Podaj seed");
+            int seed = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Podaj pojemność plecaka");
-            int C = 0;
-            C = int.Parse(Console.ReadLine());
+            int C = int.Parse(Console.ReadLine());
 
-            Plecak plecak = new Plecak(n, 1);
+            Plecak plecak = new Plecak(n, seed);
+            plecak.Sort();
             Console.WriteLine(plecak);
             Console.ReadLine();
         }

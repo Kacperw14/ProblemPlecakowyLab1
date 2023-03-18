@@ -37,18 +37,15 @@ namespace ProblemPlecakowy
         public void Sort()
         {
             Plecak plecak;
-            //zmiana this 
-            //List<float> prices = new List<float>();
-            items = items.OrderBy(items => items.price).ToList();
+            items = items.OrderBy(it => it.price).ToList();
+            //items = items.OrderByDescending(it => it.price).ToList();
             
-            foreach (Item i in items)
+            /*
+            foreach (var i in items)
             {
-                Console.WriteLine(i);
-                
-                //prices.Add(i.GetPrice());
+               Console.WriteLine(i.price);
             }
-            
-            //items.ordedby
+            */
         }
     }
 
