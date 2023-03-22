@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace ProblemPlecakowy
 {
-    internal class Plecak
+    public class Plecak
     {
-        List<Item> items;
+        public List<Item> items;
 
         public Plecak(int N, int seed)
         {

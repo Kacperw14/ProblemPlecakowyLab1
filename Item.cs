@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProblemPlecakowy  
+namespace ProblemPlecakowy
 {
-    class Item
+    public class Item
     {
         public int value;
         public int weight;
@@ -18,6 +18,6 @@ namespace ProblemPlecakowy
             weight = w;
             price = (float)v / (float)w;
             x = false;
-        } 
+        }
     }
 }
