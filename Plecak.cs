@@ -7,7 +7,7 @@ namespace ProblemPlecakowy
     public class Plecak
     {
         public List<Item> items;
-        public int cap;
+        //public int cap;
 
         public Plecak(int N, int seed)
         {
