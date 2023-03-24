@@ -10,7 +10,7 @@ namespace TestyJednostkowe
     public class UnitTest1
     {
         [TestMethod]
-        public void CzyZwracaJedenElementGdySieMiesciPrzynajmniejJeden()
+        public void CzyPakujeJedenElementGdySieMiesciPrzynajmniejJeden()
         {
             int N = 10;
             int seed = 1;
@@ -43,13 +43,28 @@ namespace TestyJednostkowe
         }
 
         [TestMethod]
-        public void Test3()
+        public void CzyTworzySieOdpowiedniaLiczbaPrzedmiotow()
         {
             int N = 10;
             int seed = 1;
-            int capacity = 10;
-            Plecak P = new Plecak(N, seed, capacity);
+            for (int capacity = 0; capacity < 20; capacity++)
+            {
+                Plecak P = new Plecak(N, seed, capacity);
+                Assert.IsTrue(N == P.items.Count);
+            }
+        }
 
+        [TestMethod]
+        public void CzyDobrzePakuje()
+        {
+            int N = 10;
+            int seed = 1;
+            for (int capacity = 0; capacity < 20; capacity++)
+            {
+                Plecak P = new Plecak(N, seed, capacity);
+                P.PackBackpack();
+                Assert.IsTrue(capacity >= P.package);
+            }
         }
     }
 
