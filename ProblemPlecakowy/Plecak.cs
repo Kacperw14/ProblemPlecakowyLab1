@@ -8,11 +8,13 @@ namespace ProblemPlecakowy
     {
         public List<Item> items;
         public int cap;
+        public int package;
 
         public Plecak(int N, int seed, int C)
         {
             items = new List<Item>();
             cap = C;
+            package = 0;
             Random random = new Random(seed);
 
             Console.WriteLine("\n");
@@ -44,9 +46,6 @@ namespace ProblemPlecakowy
 
         public void PackBackpack()
         {
-            int package = 0;
-            //Plecak plecak = new Plecak(0, 0);
-
             Sort();
             foreach (Item i in items)
             {
