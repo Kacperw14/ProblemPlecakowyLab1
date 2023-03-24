@@ -14,10 +14,11 @@ namespace TestyJednostkowe
         {
             int N = 10;
             int seed = 1;
-            Plecak P = new Plecak(N, seed);
+            //Plecak P = new Plecak(N, seed);
             for (int capacity = 0; capacity < 20; capacity++)
             {
-                P.PackBackpack(capacity); //sprawdzamy to
+                Plecak P = new Plecak(N, seed, capacity);
+                P.PackBackpack(); //sprawdzamy to
                 Item min = P.items.OrderBy(it => it.weight).ToList()[0];
                 if (capacity >= min.weight)
                     Assert.IsTrue(min.x);
@@ -29,11 +30,12 @@ namespace TestyJednostkowe
         {
             int N = 10;
             int seed = 1;
-            Plecak P = new Plecak(N, seed);
+            //Plecak P = new Plecak(N, seed);
 
             for (int capacity = 0; capacity < 20; capacity++)
             {
-                P.PackBackpack(capacity); //sprawdzamy to
+                Plecak P = new Plecak(N, seed, capacity);
+                P.PackBackpack(); //sprawdzamy to
                 Item min = P.items.OrderBy(it => it.weight).ToList()[0];
                 if (capacity < min.weight)
                     Assert.IsFalse(min.x);
@@ -46,7 +48,7 @@ namespace TestyJednostkowe
             int N = 10;
             int seed = 1;
             int capacity = 10;
-            Plecak P = new Plecak(N, seed);
+            Plecak P = new Plecak(N, seed, capacity);
 
         }
     }
