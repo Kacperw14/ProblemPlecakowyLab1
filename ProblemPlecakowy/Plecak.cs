@@ -7,11 +7,12 @@ namespace ProblemPlecakowy
     public class Plecak
     {
         public List<Item> items;
-        //public int cap;
+        public int cap;
 
-        public Plecak(int N, int seed)
+        public Plecak(int N, int seed, int C)
         {
             items = new List<Item>();
+            cap = C;
             Random random = new Random(seed);
 
             Console.WriteLine("\n");
@@ -41,7 +42,7 @@ namespace ProblemPlecakowy
             items = items.OrderByDescending(it => it.price).ToList();
         }
 
-        public void PackBackpack(int capacity)
+        public void PackBackpack()
         {
             int package = 0;
             //Plecak plecak = new Plecak(0, 0);
@@ -50,10 +51,10 @@ namespace ProblemPlecakowy
             foreach (Item i in items)
             {
                 //przerwanie funkcji gdy osiagnieto cel:
-                if (package == capacity) break;
-                else if (package < capacity)
+                if (package == cap) break;
+                else if (package < cap)
                 {
-                   if (package + i.weight <= capacity)
+                   if (package + i.weight <= cap)
                    {
                         package += i.weight;
                         i.x = true;
