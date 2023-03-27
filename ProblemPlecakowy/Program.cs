@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ProblemPlecakowy
 {
@@ -10,7 +11,10 @@ namespace ProblemPlecakowy
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Podaj liczbe przedmiotow");
+            Application.Run(new Form1());
+
+            /*
+             * Console.WriteLine("Podaj liczbe przedmiotow");
             int n = int.Parse(Console.ReadLine());
             
             Console.WriteLine("Podaj seed");
@@ -24,6 +28,7 @@ namespace ProblemPlecakowy
             plecak.PackBackpack();
             Console.WriteLine(plecak);
             Console.ReadLine();
+            */
         }
     }
 }
